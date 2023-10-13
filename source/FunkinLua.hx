@@ -1247,6 +1247,14 @@ class FunkinLua {
 				}));
 			}
 		});
+		Lua_helper.add_callback(lua, "resizeWindow", function(w:Int, h:Int)
+		{
+			return FlxG.resizeWindow(w, h);
+		});
+		Lua_helper.add_callback(lua, "exit", function(code:Int)
+		{
+			return openfl.system.System.exit(code);
+		});
 		Lua_helper.add_callback(lua, "mouseClicked", function(button:String) {
 			var boobs = FlxG.mouse.justPressed;
 			switch(button){
