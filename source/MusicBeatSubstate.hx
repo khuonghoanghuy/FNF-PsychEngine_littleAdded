@@ -37,6 +37,9 @@ class MusicBeatSubstate extends FlxSubState
 		if (oldStep != curStep && curStep > 0)
 			stepHit();
 
+		if (FlxG.keys.justPressed.F12) {
+			openfl.system.System.gc();
+		}
 
 		super.update(elapsed);
 	}
