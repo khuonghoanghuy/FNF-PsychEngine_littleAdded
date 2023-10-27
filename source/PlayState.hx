@@ -5060,7 +5060,7 @@ class PlayState extends MusicBeatState
 			notes.sort(FlxSort.byY, ClientPrefs.downScroll ? FlxSort.ASCENDING : FlxSort.DESCENDING);
 		}
 
-		if (!ClientPrefs.iconbeattype == "Beat When Hit note") {
+		if (ClientPrefs.iconbeattype == "Psych Engine" || ClientPrefs.iconbeattype == "FNF Style" || ClientPrefs.iconbeattype == "Dave And Bambi") {
 			iconP1.scale.set(1.2, 1.2);
 			iconP2.scale.set(1.2, 1.2);
 	
