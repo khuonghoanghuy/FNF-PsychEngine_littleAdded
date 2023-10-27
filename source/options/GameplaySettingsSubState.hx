@@ -145,6 +145,15 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 		option.changeValue = 0.1;
 		addOption(option);
 
+		var option:Option = new Option("Icon Beat Type",
+			'Change the Beat of icon you wanna using.',
+			'iconbeattype',
+			'string',
+			'Psych Engine',
+			['Psych Engine', 'FNF Style', 'Dave And Bambi', 'Beat When Hit note']
+		);
+		addOption(option);
+
 		super();
 	}
 
