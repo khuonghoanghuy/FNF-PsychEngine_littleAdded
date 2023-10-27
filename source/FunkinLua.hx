@@ -1251,6 +1251,10 @@ class FunkinLua {
 		{
 			return FlxG.resizeWindow(w, h);
 		});
+		Lua_helper.add_callback(lua, "resizeGame", function(w:Int, h:Int)
+		{
+			return FlxG.resizeGame(w, h);
+		});
 		Lua_helper.add_callback(lua, "exit", function(code:Int)
 		{
 			return openfl.system.System.exit(code);
@@ -1263,7 +1267,6 @@ class FunkinLua {
 				case 'right':
 					boobs = FlxG.mouse.justPressedRight;
 			}
-
 
 			return boobs;
 		});

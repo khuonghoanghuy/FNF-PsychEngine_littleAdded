@@ -2687,6 +2687,8 @@ class PlayState extends MusicBeatState
 	public var skipArrowStartTween:Bool = false; //for lua
 	private function generateStaticArrows(player:Int):Void
 	{
+		callOnLuas("generateStaticArrows", []);
+
 		for (i in 0...4)
 		{
 			// FlxG.log.add(i);
