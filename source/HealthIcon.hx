@@ -62,8 +62,14 @@ class HealthIcon extends FlxSprite
 	override function updateHitbox()
 	{
 		super.updateHitbox();
-		offset.x = iconOffsets[0];
-		offset.y = iconOffsets[1];
+		if (ClientPrefs.iconbeattype == "Psych Engine") {
+			offset.x = iconOffsets[0];
+			offset.y = iconOffsets[1];
+		} else if (ClientPrefs.iconbeattype == "Dave And Bambi") {
+			offset.set(Std.int(FlxMath.bound(width - 150,0)),Std.int(FlxMath.bound(height - 150,0)));
+		} else {
+			// nothing
+		}
 	}
 
 	public function getCharacter():String {
