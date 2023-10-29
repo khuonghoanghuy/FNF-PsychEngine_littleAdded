@@ -20,6 +20,10 @@ import lime.app.Application;
 import Achievements;
 import editors.MasterEditorMenu;
 import flixel.input.keyboard.FlxKey;
+#if sys
+import ModMetadata.ModMetadata;
+import sys.FileSystem;
+#end
 
 using StringTools;
 

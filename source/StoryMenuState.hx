@@ -18,6 +18,9 @@ import flixel.util.FlxTimer;
 import lime.net.curl.CURLCode;
 import flixel.graphics.FlxGraphic;
 import WeekData;
+#if sys
+import sys.FileSystem;
+#end
 
 using StringTools;
 
