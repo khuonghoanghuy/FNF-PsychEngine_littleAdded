@@ -35,7 +35,7 @@ using StringTools;
 
 class ModsMenuState extends MusicBeatState
 {
-	var mods:Array<ModMetadata> = [];
+	public static var mods:Array<ModMetadata> = [];
 	static var changedAThing = false;
 	var bg:FlxSprite;
 	var intendedColor:Int;
@@ -47,6 +47,7 @@ class ModsMenuState extends MusicBeatState
 	var needaReset = false;
 	private static var curSelected:Int = 0;
 	public static var defaultColor:FlxColor = 0xFF665AFF;
+	public static var customMenuText:String;
 
 	var buttonDown:FlxButton;
 	var buttonTop:FlxButton;
@@ -717,6 +718,7 @@ class ModMetadata
 	public var restart:Bool;//trust me. this is very important
 	public var alphabet:Alphabet;
 	public var icon:AttachedSprite;
+	public var customMenuText:String;
 
 	public function new(folder:String)
 	{
@@ -725,6 +727,7 @@ class ModMetadata
 		this.description = "No description provided.";
 		this.color = ModsMenuState.defaultColor;
 		this.restart = false;
+		this.customMenuText = "";
 
 		//Try loading json
 		var path = Paths.mods(folder + '/pack.json');
@@ -737,6 +740,7 @@ class ModMetadata
 					var description:String = Reflect.getProperty(stuff, "description");
 					var name:String = Reflect.getProperty(stuff, "name");
 					var restart:Bool = Reflect.getProperty(stuff, "restart");
+					var customMenuText:String = Reflect.getProperty(stuff, "customMenuText");
 
 				if(name != null && name.length > 0)
 				{
