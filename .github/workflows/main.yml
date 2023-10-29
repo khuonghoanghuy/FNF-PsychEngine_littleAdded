@@ -4,9 +4,9 @@ name: Build
 
 # Controls when the action will run.
 on:
+  runs-on: self-hosted
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-  runs-on: self-hosted
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
