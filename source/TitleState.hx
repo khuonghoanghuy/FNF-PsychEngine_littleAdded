@@ -85,7 +85,7 @@ class TitleState extends MusicBeatState
 	var titleJSON:TitleData;
 
 	public static var updateVersion:String = '';
-	public var luaArray:Array<FunkinLua> = [];
+	// public var luaArray:Array<FunkinLua> = [];
 
 	override public function create():Void
 	{
@@ -231,9 +231,9 @@ class TitleState extends MusicBeatState
 		}
 		#end
 
-		PlayState.instance.callOnLuas("createTitle", []);
+		// PlayState.instance.callOnLuas("createTitle", []);
 
-		// "GLOBAL" SCRIPTS
+		/*// "GLOBAL" SCRIPTS
 		#if LUA_ALLOWED
 		var filesPushed:Array<String> = [];
 		var foldersToCheck:Array<String> = [Paths.getPreloadPath('scripts/title/')];
@@ -261,7 +261,7 @@ class TitleState extends MusicBeatState
 				}
 			}
 		}
-		#end
+		#end*/
 	}
 
 	var logoBl:FlxSprite;
@@ -447,7 +447,7 @@ class TitleState extends MusicBeatState
 		else
 			initialized = true;
 
-		PlayState.instance.callOnLuas("startIntro", []);
+		// PlayState.instance.callOnLuas("startIntro", []);
 
 		// credGroup.add(credTextShit);
 	}
@@ -475,7 +475,7 @@ class TitleState extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
-		PlayState.instance.callOnLuas("updateTitle", [elapsed]);
+		// PlayState.instance.callOnLuas("updateTitle", [elapsed]);
 
 		if (FlxG.sound.music != null)
 			Conductor.songPosition = FlxG.sound.music.time;
