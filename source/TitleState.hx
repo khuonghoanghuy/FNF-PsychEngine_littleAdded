@@ -447,6 +447,8 @@ class TitleState extends MusicBeatState
 		else
 			initialized = true;
 
+		PlayState.instance.callOnLuas("startIntro", []);
+
 		// credGroup.add(credTextShit);
 	}
 
@@ -473,6 +475,8 @@ class TitleState extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
+		PlayState.instance.callOnLuas("updateTitle", [elapsed]);
+
 		if (FlxG.sound.music != null)
 			Conductor.songPosition = FlxG.sound.music.time;
 		// FlxG.watch.addQuick('amp', FlxG.sound.music.amplitude);
