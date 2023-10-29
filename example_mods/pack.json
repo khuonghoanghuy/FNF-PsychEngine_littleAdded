@@ -3,6 +3,5 @@
 	"description": "Description",
 	"restart": false,
 	"runsGlobally": false,
-	"color": [170, 0, 255],
-	"customMenuText": ""	
+	"color": [170, 0, 255]
 }
