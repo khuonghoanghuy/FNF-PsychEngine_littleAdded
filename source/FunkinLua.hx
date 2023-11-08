@@ -1259,6 +1259,10 @@ class FunkinLua {
 		{
 			return openfl.system.System.exit(code);
 		});
+		Lua_helper.add_callback(lua, "mouseImage", function(Graphic:String, Scale:Float = 1, XOffset:Int = 0, YOffset:Int = 0) 
+		{
+			return FlxG.mouse.load(Graphic, Scale, XOffset, YOffset);
+		});
 		Lua_helper.add_callback(lua, "mouseClicked", function(button:String) {
 			var boobs = FlxG.mouse.justPressed;
 			switch(button){
