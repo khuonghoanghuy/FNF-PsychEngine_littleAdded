@@ -4681,6 +4681,7 @@ class PlayState extends MusicBeatState
 			}
 
 			if (ClientPrefs.clearWhenHitANote) {
+				Paths.clearUnusedMemory();
 				openfl.system.System.gc();
 			}
 
