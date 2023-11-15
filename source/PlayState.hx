@@ -4681,7 +4681,7 @@ class PlayState extends MusicBeatState
 			}
 
 			if (ClientPrefs.clearWhenHitANote) {
-				openfl.System.gc();
+				openfl.system.System.gc();
 			}
 
 			if(cpuControlled && (note.ignoreNote || note.hitCausesMiss)) return;
