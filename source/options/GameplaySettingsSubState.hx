@@ -154,6 +154,14 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 		);
 		addOption(option);
 
+		var option:Option = new Option("Clean Memory When Hit A Note",
+			'If checked, when you hit/hold the note, the system will clean the memory',
+			'clearWhenHitANote',
+			'bool',
+			false
+		);
+		addOption(option);
+
 		super();
 	}
 

@@ -124,6 +124,14 @@ class VisualsUISubState extends BaseOptionsMenu
 			true);
 		addOption(option);
 
+		var option:Option = new Option('Set Main Menu',
+			"Select your prefect Main Menu Select, included 'Full', 'Only Story Mode' and more",
+			"defaultMenu",
+			'string',
+			'Full',
+			['Full', 'Only Story Mode', 'Only Story Mode with Freeplay', 'Story Mode, Freeplay and Credits', 'Full But not have Awards and Mods Select', 'Full But not have Awards Select']);
+		addOption(option);
+		
 		super();
 	}
 

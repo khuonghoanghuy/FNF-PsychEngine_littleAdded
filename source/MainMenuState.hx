@@ -35,15 +35,11 @@ class MainMenuState extends MusicBeatState
 	var menuItems:FlxTypedGroup<FlxSprite>;
 	private var camGame:FlxCamera;
 	private var camAchievement:FlxCamera;
+
+	var realOption:Array<String> = [];
 	
 	var optionShit:Array<String> = [
-		'story_mode',
-		'freeplay',
-		#if MODS_ALLOWED 'mods', #end
-		#if ACHIEVEMENTS_ALLOWED 'awards', #end
-		'credits',
-		#if !switch 'donate', #end
-		'options'
+
 	];
 
 	var magenta:FlxSprite;
@@ -54,7 +50,57 @@ class MainMenuState extends MusicBeatState
 
 	override function create()
 	{
-		PlayState.instance.callOnLuas("createMenu", []);
+		var realOptionData:String = ClientPrefs.defaultMenu;
+		switch (realOptionData)
+		{
+			case "Full":
+				realOption = [
+					'story_mode',
+					'freeplay',
+					#if MODS_ALLOWED 'mods', #end
+					#if ACHIEVEMENTS_ALLOWED 'awards', #end
+					'credits',
+					#if !switch 'donate', #end
+					'options'
+				];
+			case "Only Story Mode":
+				realOption = [
+					'story_mode',
+					'options'
+				];
+			
+			case "Only Story Mode with Freeplay":
+				realOption = [
+					'story_mode',
+					'freeplay',
+					'options'
+				];
+			case "Story Mode, Freeplay and Credits":
+				realOption = [
+					'story_mode',
+					'freeplay',
+					'credits',
+					'options'
+				];
+			case "Full But not have Awards and Mods Select":
+				realOption = [
+					'story_mode',
+					'freeplay',
+					'credits',
+					#if !switch 'donate', #end
+					'options'
+				];
+			case "Full But not have Awards Select":
+				realOption = [
+					'story_mode',
+					'freeplay',
+					#if ACHIEVEMENTS_ALLOWED 'awards', #end
+					'credits',
+					#if !switch 'donate', #end
+					'options'
+				];
+		}
+		optionShit = realOption;
 
 		#if MODS_ALLOWED
 		Paths.pushGlobalMods();

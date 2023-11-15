@@ -4680,6 +4680,10 @@ class PlayState extends MusicBeatState
 				iconP1.updateHitbox();
 			}
 
+			if (ClientPrefs.clearWhenHitANote) {
+				openfl.System.gc();
+			}
+
 			if(cpuControlled && (note.ignoreNote || note.hitCausesMiss)) return;
 
 			if (ClientPrefs.hitsoundVolume > 0 && !note.hitsoundDisabled)

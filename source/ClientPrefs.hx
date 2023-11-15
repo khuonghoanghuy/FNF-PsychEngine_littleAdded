@@ -88,6 +88,8 @@ class ClientPrefs {
 		'debug_2'		=> [EIGHT, NONE]
 	];
 	public static var defaultKeys:Map<String, Array<FlxKey>> = null;
+	public static var defaultMenu:String = "Full";
+	public static var clearWhenHitANote:Bool = false;
 
 	public static function loadDefaultKeys() {
 		defaultKeys = keyBinds.copy();
@@ -132,6 +134,8 @@ class ClientPrefs {
 		FlxG.save.data.checkForUpdates = checkForUpdates;
 		FlxG.save.data.comboStacking = comboStacking;
 		FlxG.save.data.iconbeattype = iconbeattype;
+		FlxG.save.data.defaultMenu = defaultMenu;
+		FlxG.save.data.clearWhenHitANote = clearWhenHitANote;
 	
 		FlxG.save.flush();
 
@@ -270,6 +274,10 @@ class ClientPrefs {
 			comboStacking = FlxG.save.data.comboStacking;
 		if (FlxG.save.data.iconbeattype != null)
 			iconbeattype = FlxG.save.data.iconbeattype;
+		if (FlxG.save.data.defaultMenu != null)
+			defaultMenu = FlxG.save.data.defaultMenu;
+		if (FlxG.save.data.clearWhenHitANote != null)
+			clearWhenHitANote = FlxG.save.data.clearWhenHitANote;
 
 		var save:FlxSave = new FlxSave();
 		save.bind('controls_v2', 'ninjamuffin99');

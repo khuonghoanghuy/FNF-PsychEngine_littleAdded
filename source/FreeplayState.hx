@@ -55,7 +55,6 @@ class FreeplayState extends MusicBeatState
 	{
 		//Paths.clearStoredMemory();
 		//Paths.clearUnusedMemory();
-		PlayState.instance.callOnLuas("createFreeplay", []);
 		
 		persistentUpdate = true;
 		PlayState.isStoryMode = false;
@@ -270,7 +269,6 @@ class FreeplayState extends MusicBeatState
 	var holdTime:Float = 0;
 	override function update(elapsed:Float)
 	{
-		PlayState.instance.callOnLuas("updateFreeplay", [elapsed]);
 		if (FlxG.sound.music.volume < 0.7)
 		{
 			FlxG.sound.music.volume += 0.5 * FlxG.elapsed;

@@ -3,8 +3,11 @@ Made this engine cuz idk bored time :l
 
 Base of Psych Engine ofc why not.
 
-# Friday Night Funkin' - Psych Engine
-Engine originally used on [Mind Games Mod](https://gamebanana.com/mods/301107), intended to be a fix for the vanilla version's many issues while keeping the casual play aspect of it. Also aiming to be an easier alternative to newbie coders.
+Little Added Engine mosty like a Psych Engine come with alot of Lua Script API for using to making mods include:
+- Resize Windows
+- Change Cursor Mouse
+- Exit
+And Many more will come
 
 ## Installation:
 You must have [the most up-to-date version of Haxe](https://haxe.org/download/), seriously, stop using 4.1.5, it misses some stuff.
@@ -14,7 +17,9 @@ Using `hmm` and type `haxelib run hmm install` in Command prompt/PowerShell
 If you get an error about StatePointer when using Lua, run `haxelib remove linc_luajit` into Command Prompt/PowerShell, then re-install linc_luajit.
 
 ## Credits:
+### Little Added Engine:
 * Huy1234TH - Programmer, Creator of this Little Added Engine
+### Psych Engine Team
 * Shadow Mario - Programmer
 * RiverOaken - Artist
 * Yoshubs - Assistant Programmer
