@@ -57,6 +57,8 @@ import hscript.Expr;
 import Discord;
 #end
 
+import openfl.display.DisplayObject;
+
 using StringTools;
 
 class FunkinLua {
