@@ -14,7 +14,7 @@ import flixel.math.FlxMath;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
 import flixel.system.FlxSound;
-import flixel.tweens.FlxTween;
+import flixel.tweens.*;
 #if MODS_ALLOWED
 import sys.FileSystem;
 #end
