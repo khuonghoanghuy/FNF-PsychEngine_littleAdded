@@ -2344,8 +2344,13 @@ class FunkinLua {
 			#end
 		});
 
-		Lua_helper.add_callback(lua, "addChild", function(displayChild:DisplayObject) {return FlxG.stage.addChild(displayChild)});
-		Lua_helper.add_callback(lua, "removeChild", function(displayChild:DisplayObject) {return FlxG.stage.removeChild(displayChild)});
+		Lua_helper.add_callback(lua, "addChild", function(displayChild:DisplayObject) {
+			return FlxG.stage.addChild(displayChild);
+		});
+					
+		Lua_helper.add_callback(lua, "removeChild", function(displayChild:DisplayObject) {
+			return FlxG.stage.removeChild(displayChild);
+		});
 					
 		// LUA TEXTS
 		Lua_helper.add_callback(lua, "makeLuaText", function(tag:String, text:String, width:Int, x:Float, y:Float) {
