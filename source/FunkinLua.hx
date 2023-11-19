@@ -3475,7 +3475,7 @@ class HScript
 			}
 			return false;
 		});
-		haxeInterp.variables.set('SUtil', SUtil);
+		interp.variables.set('SUtil', SUtil);
 	}
 
 	public function execute(codeToRun:String):Dynamic
