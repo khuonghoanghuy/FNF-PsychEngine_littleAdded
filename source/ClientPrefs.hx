@@ -92,7 +92,7 @@ class ClientPrefs {
 	public static var defaultMenu:String = "Full";
 	public static var clearWhenHitANote:Bool = false;
 	// public static var imagesPersist:Bool = false;
-
+	public static var disableVectoBG:Bool = false;
 
 	public static function loadDefaultKeys() {
 		defaultKeys = keyBinds.copy();
@@ -141,6 +141,7 @@ class ClientPrefs {
 		FlxG.save.data.defaultMenu = defaultMenu;
 		FlxG.save.data.clearWhenHitANote = clearWhenHitANote;
 		// FlxG.save.data.imagesPersist = imagesPersist;
+		FlxG.save.data.disableVectoBG = disableVectoBG;
 	
 		FlxG.save.flush();
 
@@ -288,6 +289,8 @@ class ClientPrefs {
 			clearWhenHitANote = FlxG.save.data.clearWhenHitANote;
 		/* if (FlxG.save.data.imagesPersist != null)
 			imagesPersist = FlxG.save.data.imagesPersist; */
+		if (FlxG.save.data.disableVectoBG != null)
+			disableVectoBG = FlxG.save.data.disableVectoBG;
 
 		var save:FlxSave = new FlxSave();
 		save.bind('controls_v2', 'ninjamuffin99');
