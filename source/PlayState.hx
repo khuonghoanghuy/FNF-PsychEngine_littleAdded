@@ -1374,7 +1374,8 @@ class PlayState extends MusicBeatState
 		super.create();
 
 		cacheCountdown();
-		cachePopUpScore();
+		if (!cpuControlled)
+			cachePopUpScore();
 		for (key => type in precacheList)
 		{
 			//trace('Key $key is type $type');
@@ -4537,7 +4538,8 @@ class PlayState extends MusicBeatState
 			}
 		});
 		combo = 0;
-		health -= daNote.missHealth * healthLoss;
+		if (!cpuControlled)
+			health -= daNote.missHealth * healthLoss;
 		
 		if(instakillOnMiss)
 		{
@@ -4574,7 +4576,8 @@ class PlayState extends MusicBeatState
 
 		if (!boyfriend.stunned)
 		{
-			health -= 0.05 * healthLoss;
+			if (!cpuControlled)
+				health -= 0.05 * healthLoss;
 			if(instakillOnMiss)
 			{
 				vocals.volume = 0;
@@ -4723,9 +4726,11 @@ class PlayState extends MusicBeatState
 			{
 				combo += 1;
 				if(combo > 9999) combo = 9999;
-				popUpScore(note);
+				if (!cpuControlled)
+					popUpScore(note);
 			}
-			health += note.hitHealth * healthGain;
+			if (cpuControlled)
+				health += note.hitHealth * healthGain;
 
 			if(!note.noAnimation) {
 				var animToPlay:String = singAnimations[Std.int(Math.abs(note.noteData))];
