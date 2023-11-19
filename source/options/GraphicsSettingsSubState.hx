@@ -81,7 +81,7 @@ class GraphicsSettingsSubState extends BaseOptionsMenu
 		option.onChange = onChangeFramerate;
 		#end
 
-		var option:Option = new Option('Persistent Cached Data', 'If checked, images loaded will stay in memory\nuntil the game is closed, this increases memory usage,\nbut basically makes reloading times instant. From Psych Engine 0.4.2.', 'imagesPersist', 'bool', false);
+		// var option:Option = new Option('Persistent Cached Data', 'If checked, images loaded will stay in memory\nuntil the game is closed, this increases memory usage,\nbut basically makes reloading times instant. From Psych Engine 0.4.2.', 'imagesPersist', 'bool', false);
 
 		super();
 	}
