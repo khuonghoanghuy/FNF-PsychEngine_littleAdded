@@ -2792,6 +2792,22 @@ class FunkinLua {
 			#end
 			return list;
 		});
+		Lua_helper.add_callback(lua, "setupScoreText", function(setX:Float, setY:Float, setW:Float = 0, setH:Float = 0, setSize:Int = 20, wannaBold:Bool = false, getFont:String = null, color:String = "0xffffff", borderSize:Float = 1.25){
+			// check if null
+			if (getFont == null) {
+				getFont = Paths.font("vcr.ttf");
+			}
+			
+			PlayState.instance.scoreTxt.x = setX;
+			PlayState.instance.scoreTxt.y = setY;
+			PlayState.instance.scoreTxt.withd = setW;
+			PlayState.instance.scoreTxt.height = setH;
+			PlayState.instance.scoreTxt.size = setSize;
+			PlayState.instance.scoreTxt.size = wannaBold;
+			PlayState.instance.scoreTxt.font = getFont;
+			PlayState.instance.scoreTxt.color = Std.string(color);
+			PlayState.instance.scoreTxt.borderSize = borderSize;
+		});
 
 		call('onCreate', []);
 		#end
