@@ -80,6 +80,13 @@
         "dir": null,
         "ref": "master",
         "url": "https://github.com/nebulazorua/linc_luajit"
+      },
+      {
+        "name": "extension-androidtools",
+        "type": "git",
+        "dir": null,
+        "ref": "main",
+        "url": "https://github.com/majigsaw77/extension-androidtools.git"
       }
     ]
   }
