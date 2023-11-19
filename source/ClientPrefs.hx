@@ -90,7 +90,7 @@ class ClientPrefs {
 	public static var defaultKeys:Map<String, Array<FlxKey>> = null;
 	public static var defaultMenu:String = "Full";
 	public static var clearWhenHitANote:Bool = false;
-	public static var imagesPersist:Bool = false;
+	// public static var imagesPersist:Bool = false;
 
 	public static function loadDefaultKeys() {
 		defaultKeys = keyBinds.copy();
@@ -137,7 +137,7 @@ class ClientPrefs {
 		FlxG.save.data.iconbeattype = iconbeattype;
 		FlxG.save.data.defaultMenu = defaultMenu;
 		FlxG.save.data.clearWhenHitANote = clearWhenHitANote;
-		FlxG.save.data.imagesPersist = imagesPersist;
+		// FlxG.save.data.imagesPersist = imagesPersist;
 	
 		FlxG.save.flush();
 
@@ -280,8 +280,8 @@ class ClientPrefs {
 			defaultMenu = FlxG.save.data.defaultMenu;
 		if (FlxG.save.data.clearWhenHitANote != null)
 			clearWhenHitANote = FlxG.save.data.clearWhenHitANote;
-		if (FlxG.save.data.imagesPersist != null)
-			imagesPersist = FlxG.save.data.imagesPersist;
+		/* if (FlxG.save.data.imagesPersist != null)
+			imagesPersist = FlxG.save.data.imagesPersist; */
 
 		var save:FlxSave = new FlxSave();
 		save.bind('controls_v2', 'ninjamuffin99');
