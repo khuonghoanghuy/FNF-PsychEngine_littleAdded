@@ -65,7 +65,7 @@ class GraphicsSettingsSubState extends BaseOptionsMenu
 			'shadersToy', //Save data variable name
 			'bool', //Variable type
 			false); //Default value
-		addOption(option);
+		// addOption(option);
 
 		#if !html5 //Apparently other framerates isn't correctly supported on Browser? Probably it has some V-Sync shit enabled by default, idk
 		var option:Option = new Option('Framerate',
