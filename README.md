@@ -23,8 +23,7 @@ If you get an error about StatePointer when using Lua, run `haxelib remove linc_
 * Shadow Mario - Programmer
 * RiverOaken - Artist
 * Yoshubs - Assistant Programmer
-
-### Special Thanks
+### Special Thanks From Psych Engine Team
 * bbpanzu - Ex-Programmer
 * shubs - New Input System
 * SqirraRNG - Crash Handler and Base code for Chart Editor's Waveform
