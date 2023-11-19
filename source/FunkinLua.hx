@@ -2804,7 +2804,6 @@ class FunkinLua {
 			PlayState.instance.scoreTxt.height = setH;
 			PlayState.instance.scoreTxt.size = setSize;
 			PlayState.instance.scoreTxt.bold = wannaBold;
-			PlayState.instance.scoreTxt.color = Std.string(color);
 			PlayState.instance.scoreTxt.borderSize = borderSize;
 		});
 
