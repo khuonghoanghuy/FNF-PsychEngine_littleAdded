@@ -9,6 +9,8 @@ Little Added Engine mosty like a Psych Engine come with alot of Lua Script API f
 - Exit
 And Many more will come
 
+[Check the wiki if u wanna see the lua api](https://github.com/khuonghoanghuy/FNF-PsychEngine_littleAdded/wiki)
+
 ## Installation:
 You must have [the most up-to-date version of Haxe](https://haxe.org/download/), seriously, stop using 4.1.5, it misses some stuff.
 
