@@ -81,6 +81,8 @@ class Main extends Sprite
 			gameHeight = Math.ceil(stageHeight / zoom);*/
 		}
 	
+		SUtil.check();
+
 		ClientPrefs.loadDefaultKeys();
 		addChild(new FlxGame(0, 0, initialState, framerate, framerate, skipSplash, startFullscreen));
 
@@ -132,8 +134,8 @@ class Main extends Sprite
 
 		errMsg += "\nUncaught Error: " + e.error + "\nPlease report this error to the GitHub page: https://github.com/ShadowMario/FNF-PsychEngine\n\n> Crash Handler written by: sqirra-rng";
 
-		if (!FileSystem.exists("./crash/"))
-			FileSystem.createDirectory("./crash/");
+		if (!FileSystem.exists(SUtil.getPath() + "./crash/"))
+			FileSystem.createDirectory(SUtil.getPath() + "./crash/");
 
 		File.saveContent(path, errMsg + "\n");
 
