@@ -84,7 +84,7 @@ class Main extends Sprite
 		SUtil.check();
 
 		ClientPrefs.loadDefaultKeys();
-		addChild(new FlxGame(0, 0, initialState, framerate, framerate, skipSplash, startFullscreen));
+		addChild(new FlxGame(0, 0, initialState, #if (flixel < "5.0.0") zoom, #end framerate, framerate, skipSplash, startFullscreen));
 
 		#if !mobile
 		fpsVar = new FPS(10, 3, 0xFFFFFF);
