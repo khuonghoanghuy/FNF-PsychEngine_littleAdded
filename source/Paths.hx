@@ -64,7 +64,6 @@ class Paths
 	/// haya I love you for the base cache dump I took to the max
 	public static function clearUnusedMemory() {
 		// clear non local assets in the tracked assets list
-		// if(ClientPrefs.imagesPersist) return;
 		for (key in currentTrackedAssets.keys()) {
 			// if it is not currently contained within the used local assets
 			if (!localTrackedAssets.contains(key)
@@ -88,7 +87,6 @@ class Paths
 	public static var localTrackedAssets:Array<String> = [];
 	public static function clearStoredMemory(?cleanUnused:Bool = false) {
 		// clear anything not in the tracked assets list
-		// if(ClientPrefs.imagesPersist) return;
 		@:privateAccess
 		for (key in FlxG.bitmap._cache.keys())
 		{
@@ -243,11 +241,9 @@ class Paths
 
 	static public function getTextFromFile(key:String, ?ignoreMods:Bool = false):String
 	{
-		#if sys
 		#if MODS_ALLOWED
 		if (!ignoreMods && FileSystem.exists(modFolders(key)))
 			return File.getContent(modFolders(key));
-		#end
 
 		if (FileSystem.exists(SUtil.getPath() + getPreloadPath(key)))
 			return File.getContent(SUtil.getPath() + getPreloadPath(key));
@@ -383,7 +379,7 @@ class Paths
 		// trace(gottenPath);
 		if(!currentTrackedSounds.exists(gottenPath))
 		#if MODS_ALLOWED
-			currentTrackedSounds.set(gottenPath, Sound.fromFile('./' + gottenPath));
+			currentTrackedSounds.set(gottenPath, Sound.fromFile(gottenPath));
 		#else
 		{
 			var folder:String = '';
